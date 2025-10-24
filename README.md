@@ -39,20 +39,21 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 | Feature | Description | Type |
 |----------|-------------|------|
 | `video_id` | Unique video identifier | Text |
+| `trending_date` | Date video appeared on trending list | Datetime |
 | `title` | Video title | Text |
 | `channel_title` | Creator/channel name | Categorical |
 | `category_id` | Category (mapped to category JSON file) | Categorical |
 | `publish_time` | Date/time video was published | Datetime |
-| `trending_date` | Date video appeared on trending list | Datetime |
+| `tags` | Tags used in the video | Text |
 | `views` | Number of total views | Numeric |
 | `likes` | Number of likes | Numeric |
 | `dislikes` | Number of dislikes | Numeric |
 | `comment_count` | Number of comments | Numeric |
 | `thumbnail_link` | Uniform Resource Locator for image | Text |
-| `tags` | Tags used in the video | Text |
-| `description` | Description text | Text |
 | `comments_disabled` | Comments allowed? | Boolean |
 | `ratings_disabled` | Ratings allowed? | Boolean |
+| `video_error_or_removed` | Video still available | Boolean |
+| `description` | Description text | Text |
 
 ---
 
@@ -84,8 +85,8 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 ![alt text](images_reports/dist_of_trend_categories.png)
 
 **Insight:**  
-- Most trending videos come from **Entertainment**, **Music**, and **News & Politics** categories.  
-- Educational and Gaming videos trend less frequently.
+- Most trending videos come from **Family**, **Comedy**, and **Horror** categories.  
+- Music videos and shorts trend less frequently.
 
 ---
 
@@ -123,6 +124,9 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 | What factors most influence trending videos? | **Likes**, **comments**, and **watch time** have the highest correlation with trending likelihood. |
 | Do videos with more likes/comments trend faster? | Yes — videos that trended within 48 hours of upload averaged 40% higher likes/comments. |
 | Is there a relationship between views and average watch duration? | Yes — moderate positive correlation (r ≈ 0.6). Longer watch duration generally means higher view counts. |
+
+![alt text](images_reports/engagement_vs_days_to_trend.png)
+![alt text](images_reports/engagement_vs_views.png)
 
 ---
 
