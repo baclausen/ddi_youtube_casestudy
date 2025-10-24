@@ -111,10 +111,6 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 ### Average Rating by Category
 ![alt text](images_reports/avg_likes_by_category.png)
 
-**Insight:**  
-- Genres like **Music** and **Entertainment** have higher average engagement.  
-- **How-to** and **Education** categories show moderate but consistent viewer interest.
-
 ---
 
 ## Key Findings
