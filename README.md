@@ -154,16 +154,6 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 
 ---
 
-## Appendix: Illustrations
-| Visual | Description |
-|---------|-------------|
-| ![category_distribution](reports/figures/category_distribution.png) | Bar chart showing which categories trend most often |
-| ![correlation_heatmap](reports/figures/correlation_heatmap.png) | Correlation between numeric features |
-| ![likes_vs_comments](reports/figures/likes_vs_comments.png) | Relationship between likes and comments |
-| ![views_vs_watch_time](reports/figures/views_vs_watch_time.png) | Relationship between watch time and view count |
-
----
-
 ## Summary
 This project combines **data analytics** and **visual storytelling** to understand YouTube’s trending algorithm through measurable engagement metrics.  
 The results highlight the power of audience interaction — the more a video encourages likes and comments, the more likely it is to trend.
