@@ -119,7 +119,6 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 |-----------|----------|
 | What factors most influence trending videos? | **Likes**, **comments**, and **watch time** have the highest correlation with trending likelihood. |
 | Do videos with more likes/comments trend faster? | Yes — videos that trended within 48 hours of upload averaged 40% higher likes/comments. |
-| Is there a relationship between views and average watch duration? | Yes — moderate positive correlation (r ≈ 0.6). Longer watch duration generally means higher view counts. |
 
 ![alt text](images_reports/engagement_vs_days_to_trend.png)
 ![alt text](images_reports/engagement_vs_views.png)
@@ -127,7 +126,7 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 ---
 
 ## Tools & Libraries Used
-- **Language:** Python 3.11  
+- **Language:** Python 3.13  
 - **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `plotly`, `json`, `datetime`  
 - **Environment:** Jupyter Notebook, VS Code  
 - **Visualization:** Plotly/Matplotlib for charts  
