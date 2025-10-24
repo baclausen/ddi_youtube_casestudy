@@ -99,7 +99,7 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 ---
 
 ### Likes vs Comments Scatter Plot
-PASTE IMAGE HERE!
+![alt text](images_reports/likes_vs_comments_scatter.png)
 
 **Insight:**  
 - Linear relationship: videos with high likes usually receive more comments.  
@@ -107,21 +107,12 @@ PASTE IMAGE HERE!
 
 ---
 
-### Average Rating by Genre
-PASTE IMAGE HERE
+### Average Rating by Category
+![alt text](images_reports/avg_likes_by_category.png)
 
 **Insight:**  
 - Genres like **Music** and **Entertainment** have higher average engagement.  
 - **How-to** and **Education** categories show moderate but consistent viewer interest.
-
----
-
-### Views vs Average Watch Duration
-PASTE IMAGE HERE
-
-**Insight:**  
-- Higher views often align with longer average watch duration.  
-- Videos with both **high views** and **high watch time** are more likely to appear on trending lists.
 
 ---
 
