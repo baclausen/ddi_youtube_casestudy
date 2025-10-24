@@ -38,16 +38,6 @@ Thumbs.db
 *.bak
 *.cache/
 
-# --- Data files (large / sensitive) ---
-data/raw/
-data/processed/
-data/external/
-*.json
-*.xlsx
-*.zip
-*.gz
-*.parquet
-
 # --- Other ---
 # Ignore any hidden temp files created by editors
 *~

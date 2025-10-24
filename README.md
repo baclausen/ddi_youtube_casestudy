@@ -2,7 +2,7 @@
 
 ## Project Overview
 This project explores **what factors most strongly influence whether a video trends on YouTube in the U.S.**  
-We focused on key engagement metrics such as **likes, comments, views, and average watch duration**, and examined how these factors relate to a video's likelihood of trending.
+We focused on key engagement metrics such as **likes, dislikes, comments, and views**, and examined how these factors relate to a video's likelihood of trending.
 
 ### Research Questions & Hypotheses
 **Main Question:**  
@@ -10,7 +10,7 @@ We focused on key engagement metrics such as **likes, comments, views, and avera
 
 **Supporting Questions:**  
 1. Do videos with more likes or comments trend faster in the U.S.?  
-2. Is there a relationship between views and average watch duration?
+2. What is the relationship between views and engagements?
 
 **Hypothesis:**  
 > Videos with more likes and comments are more likely to trend than those with fewer interactions.
@@ -48,6 +48,7 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 | `likes` | Number of likes | Numeric |
 | `dislikes` | Number of dislikes | Numeric |
 | `comment_count` | Number of comments | Numeric |
+| `thumbnail_link` | Uniform Resource Locator for image | Text |
 | `tags` | Tags used in the video | Text |
 | `description` | Description text | Text |
 | `comments_disabled` | Comments allowed? | Boolean |
@@ -59,29 +60,28 @@ U.S. YouTube Trending Dataset (public Kaggle dataset)
 
 ### Steps Taken:
 1. **Handled Missing Values:**
-   - Dropped columns with excessive missing values (e.g., incomplete text descriptions)
-   - Replaced missing numeric fields with the median
+   - Replaced null instances in the description (the only feature with null values) to denote when no description was available
 
 2. **Date Formatting:**
-   - Converted `trending_date` and `publish_time` to `datetime` objects  
-   - Derived a new feature: `days_to_trend = trending_date - publish_time`
+   - Converted `trending_date` and `publish_time` to `datetime` consistently formatted objects
+   - Parsed `publish_time` to features `publish_date` and `publish_time`
+   - Derived a new feature: `days_before_viral = trending_date - publish_date`
 
 3. **Category Mapping:**
-   - Merged JSON category file to replace numeric `category_id` with category names
+   - Merged JSON data into the CSV to correlate a descriptive `category` to the numerical `category_id` column
 
 4. **Removed Duplicates:**
    - Kept only first occurrence of each video on the trending list
 
-5. **Feature Engineering:**
-   - Calculated **engagement ratio**: `(likes + comments) / views`
-   - Created **watch_rate** proxy using average engagement and views
+5. **Additional Feature Engineering:**
+   - Calculated a cumulation of secondary user engagements (actions beyond views) and the percentage of these engagements compared to views: `(likes + dislikes + comments) / views`
 
 ---
 
 ## Exploratory Data Analysis (EDA)
 
 ### Distribution of Trending Categories
-PASTE IMAGE HERE!
+![alt text](images_reports/dist_of_trend_categories.png)
 
 **Insight:**  
 - Most trending videos come from **Entertainment**, **Music**, and **News & Politics** categories.  
@@ -90,7 +90,7 @@ PASTE IMAGE HERE!
 ---
 
 ### Correlation Heatmap
-PASTE IMAGE HERE!
+![alt text](images_reports/numeric_heatmap.png)
 
 **Insight:**  
 - Strong correlation between `likes`, `views`, and `comment_count`.  
